@@ -38,9 +38,9 @@ public class RenameEverythingSettings : ModSettings
         listing_Standard.CheckboxLabeled("RenameEverything.AppendCachedLabelInThingHolder".Translate(),
             ref onlyAppendInThingHolder, "RenameEverything.AppendCachedLabelInThingHolder_Tooltip".Translate());
         GUI.color = color;
-        listing_Standard.Gap();
+        /*listing_Standard.Gap();
         listing_Standard.CheckboxLabeled("RenameEverything.ShowRenameGizmosOnPawns".Translate(),
-            ref pawnWeaponRenameGizmos, "RenameEverything.ShowRenameGizmosOnPawns_Tooltip".Translate());
+            ref pawnWeaponRenameGizmos, "RenameEverything.ShowRenameGizmosOnPawns_Tooltip".Translate());*/
         Text.Font = GameFont.Medium;
         listing_Standard.Gap(24f);
         listing_Standard.Label("RenameEverything.DualWieldIntegration".Translate());
