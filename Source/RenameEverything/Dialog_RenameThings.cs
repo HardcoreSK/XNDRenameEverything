@@ -37,7 +37,17 @@ public class Dialog_RenameThings : Window
         closeOnAccept = false;
         closeOnClickedOutside = true;
         renamableComps = [renamableComp];
-        curName = renamableComp.Named ? renamableComp.Name : renamableComp.parent.LabelCapNoCount;
+        //curName = renamableComp.Named ? renamableComp.Name : renamableComp.parent.LabelCapNoCount;
+
+        if (renamableComps.Count == 1)
+        {
+            var compRenamable = renamableComps[0];
+            curName = compRenamable.Named ? compRenamable.Name : compRenamable.parent.LabelCapNoCount;
+        }
+        else
+        {
+            curName = string.Empty;
+        }
     }
 
     protected int MaxNameLength => 28;

@@ -36,6 +36,7 @@ public static class RenameUtility
             icon = TexButton.RenameTex,
             hotKey = KeyBindingDefOf.Misc1
         };
+        /*
         yield return new Command_RecolourLabel
         {
             renamable = renamableComp,
@@ -69,7 +70,7 @@ public static class RenameUtility
                 icon = TexButton.DeleteX,
                 action = delegate { RemoveNameGizmoAction(renamableComp); }
             };
-        }
+        }*/
     }
 
     [SyncMethod]
