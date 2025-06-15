@@ -11,7 +11,7 @@ public class RenameEverythingSettings : ModSettings
 
     public static bool onlyAppendInThingHolder = true;
 
-    public static bool pawnWeaponRenameGizmos = true;
+    //public static bool pawnWeaponRenameGizmos = true;
 
     public static bool dualWieldInspectString = true;
 
@@ -75,7 +75,7 @@ public class RenameEverythingSettings : ModSettings
         Scribe_Values.Look(ref showNameOnGround, "showNameOnGround", true);
         Scribe_Values.Look(ref appendCachedLabel, "appendCachedLabel");
         Scribe_Values.Look(ref onlyAppendInThingHolder, "onlyAppendInThingHolder", true);
-        Scribe_Values.Look(ref pawnWeaponRenameGizmos, "pawnWeaponRenameGizmos", true);
+        //Scribe_Values.Look(ref pawnWeaponRenameGizmos, "pawnWeaponRenameGizmos", true);
         Scribe_Values.Look(ref dualWieldInspectString, "dualWieldInspectString", true);
     }
 }
