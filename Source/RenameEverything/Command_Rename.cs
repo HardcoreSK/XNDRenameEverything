@@ -12,6 +12,6 @@ public class Command_Rename : Command_Renamable
         base.ProcessInput(ev);
         //Find.WindowStack.Add(new Dialog_RenameThings(renamables));
 
-        Find.WindowStack.Add(new FloatMenu(RenameUtility.CaravanRenameThingButtonFloatMenuOptions(renamable).ToList()));
+        Find.WindowStack.Add(new FloatMenu(RenameUtility.RenameThingButtonFloatMenuOptions(renamable).ToList()));
     }
 }

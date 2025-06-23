@@ -141,6 +141,29 @@ public static class RenameUtility
         GUI.color = cachedGUIColour;
     }
 
+    public static IEnumerable<FloatMenuOption> RenameThingButtonFloatMenuOptions(CompRenamable renamableComp)
+    {
+        yield return new FloatMenuOption(renamableComp.Props.renameTranslationKey.Translate(),
+            delegate { Find.WindowStack.Add(new Dialog_RenameThings(renamableComp)); });
+        yield return new FloatMenuOption("RenameEverything.RecolourLabel".Translate(),
+            delegate
+            {
+                Find.WindowStack.Add(new Dialog_ColourPicker(renamableComp.labelColour,
+                    delegate (Color newColour) { renamableComp.labelColour = newColour; }));
+            });
+        if (renamableComp.Named)
+        {
+            if (renamableComp.parent.def.building == null)
+            {
+                yield return new FloatMenuOption(renamableComp.allowMerge ? "RenameEverything.DisallowMerging".Translate() : "RenameEverything.AllowMerging".Translate(),
+                    delegate { AllowMergeGizmoToggleAction(renamableComp); });
+            }
+
+            yield return new FloatMenuOption("RenameEverything.RemoveName".Translate(),
+                delegate { RemoveNameGizmoAction(renamableComp); });
+        }
+    }
+
     public static IEnumerable<FloatMenuOption> CaravanRenameThingButtonFloatMenuOptions(CompRenamable renamableComp)
     {
         yield return new FloatMenuOption(renamableComp.Props.renameTranslationKey.Translate(),
@@ -154,7 +177,7 @@ public static class RenameUtility
         if (renamableComp.Named)
         {
             yield return new FloatMenuOption("RenameEverything.RemoveName".Translate(),
-                delegate { renamableComp.Named = false; });
+                delegate { RemoveNameGizmoAction(renamableComp); });
         }
     }
 
