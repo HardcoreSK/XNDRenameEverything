@@ -33,7 +33,7 @@ public static class Patches
                     "Could not find type Sandy_Detailed_RPG_Inventory.Sandy_Detailed_RPG_GearTab in RPG Style Inventory");
             }
         }
-
+        /* [Obsolete]
         if (!ModCompatibilityCheck.Infused)
         {
             return;
@@ -49,6 +49,6 @@ public static class Patches
         else
         {
             Log.Error("Could not find type Infused.GenMapUI_DrawThingLabel_Patch in Infused");
-        }
+        }*/
     }
 }

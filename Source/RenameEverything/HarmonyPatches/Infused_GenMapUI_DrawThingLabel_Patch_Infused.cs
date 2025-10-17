@@ -7,6 +7,7 @@ namespace RenameEverything;
 
 public static class Infused_GenMapUI_DrawThingLabel_Patch_Infused
 {
+    /* [Obsolete]
     public static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)
     {
         var instructionList = instructions.ToList();
@@ -25,5 +26,5 @@ public static class Infused_GenMapUI_DrawThingLabel_Patch_Infused
 
             yield return codeInstruction;
         }
-    }
+    }*/
 }

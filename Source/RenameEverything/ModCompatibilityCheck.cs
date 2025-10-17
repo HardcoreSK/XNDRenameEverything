@@ -7,7 +7,7 @@ public static class ModCompatibilityCheck
 {
     public static bool DualWield => ModsConfig.ActiveModsInLoadOrder.Any(m => m.Name == "Dual Wield");
 
-    public static bool Infused => ModsConfig.ActiveModsInLoadOrder.Any(m => m.Name == "Infused");
+    //public static bool Infused => ModsConfig.ActiveModsInLoadOrder.Any(m => m.Name == "Infused"); [Obsolete]
 
     public static bool RPGStyleInventory => ModsConfig.ActiveModsInLoadOrder.Any(m => m.Name == "RPG Style Inventory");
 
